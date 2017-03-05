@@ -146,10 +146,11 @@ ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 
  <div class="well">
  <h4>Recent Posts</h4>
- <% @articles.each do |a| %>
- <strong> <%= link_to a.title, a %></strong>
- <p><%= truncate(a.body) %></p>
- <% end %>
+  <% @articles.each do |a| %>
+  <%=  a.user.email %><br />
+  <strong> <%= link_to a.title, a %></strong>
+  <p><%= truncate(a.body) %></p>
+  <% end %>
  </div>
  </div>
 </div>
